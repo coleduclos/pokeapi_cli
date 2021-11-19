@@ -1,4 +1,4 @@
-# Pokemon Data Refresher
+# PokeAPI CLI
 
 ## Ready the Environment
 ### Create the Virtual Environmnent
