@@ -57,12 +57,26 @@ def format_pokemon(args):
         types = []
         for t in p["types"]:
             types.append(t["type"]["name"])
+        stats = []
+        for s in p["stats"]:
+            stats.append({
+                "name" : s["stat"]["name"],
+                "base_stat" : s["base_stat"],
+                "effort": s["effort"]
+            })
+        moves = []
+        for m in p["moves"]:
+            moves.append({
+                "name" : m["move"]["name"]
+            })
         output.append(
             {
                 "name": p["name"],
                 "id" : p["id"],
                 "height": p["height"],
-                "type" : types,
+                "moves" : moves,
+                "types" : types,
+                "stats" : stats,
                 "weight": p["weight"]
             }
         )
